@@ -1,0 +1,12 @@
+{
+	"compilerOptions": {
+		"module": "amd",
+		"target": "es5",
+		"outFile": "dist/script/game.js",
+		"forceConsistentCasingInFileNames": true
+	},
+	"files": [
+		"src/main.ts",
+		"typings/tsd.d.ts"
+	]
+}

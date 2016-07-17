@@ -1,0 +1,117 @@
+canvas 
+{
+	image-rendering: optimizeSpeed;
+	/* Legal fallback */
+	image-rendering: -moz-crisp-edges;
+	/* Firefox        */
+	image-rendering: -o-crisp-edges;
+	/* Opera          */
+	image-rendering: -webkit-optimize-contrast;
+	/* Safari         */
+	image-rendering: optimize-contrast;
+	/* CSS3 Proposed  */
+	image-rendering: crisp-edges;
+	/* CSS4 Proposed  */
+	image-rendering: pixelated;
+	/* CSS4 Proposed  */
+	-ms-interpolation-mode: nearest-neighbor;
+	/* IE8+           */
+}
+
+body 
+{
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+.contentOnly 
+{
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+.noselect 
+{
+	-webkit-user-select: none;
+	/* Chrome all / Safari all */
+	-moz-user-select: none;
+	/* Firefox all */
+	-ms-user-select: none;
+	/* IE 10+ */
+	user-select: none;
+	/* Likely future */
+}
+
+.MyInput 
+{
+	border: 0;
+	background-color: rgba(0, 0, 0, 0);
+}		
+
+button:active > .normal
+{
+	transform: scale(0.8);
+}
+
+.top_layer 
+{
+	pointer-events: none;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+}
+
+.bdsharebuttonbox {
+	pointer-events: all;
+}
+
+.bdsharebuttonbox adfs {
+	width: 32px !important;
+	height: 32px !important;
+	transform: scale(3);
+}
+
+.bdsharebuttonbox li {
+	opacity: 1 !important;
+}
+
+.arthref .title {
+	transform: translate(0, -100%);
+	font-size: 40px;
+	color: white;
+}
+
+.arthref .icon-container ul li div {
+	background-color: #617385;
+	border-radius: 10px;
+	display: block;
+	width: 80px;
+	height: 80px;
+	margin: 0 0 10px 0;
+}
+
+.arthref .icon-container ul li div a {
+	width: 30px;
+	height: 30px;
+	transform: scale(2.6);
+	transform-origin: 0 0;
+}
+
+
+.jtico
+{
+	transform: scale(2.6);
+	transform-origin: left top;
+	
+}
+
+.jiathis_style_32x32 .jtico
+{
+	margin-left: 60px;
+	margin-bottom: 50px;
+}

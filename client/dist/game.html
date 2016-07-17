@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>Bally Bally Crash!</title>
+	<script src="script/jquery-1.12.1.min.js"></script>
+	<script src="script/tweenjs-0.6.2.min.js"></script>
+	<script src="script/easeljs-0.8.2.combined.js"></script>
+	<script src="script/soundjs-0.6.2.min.js"></script>
+	<script src="script/box2d.js"></script>
+	<script src="script/matter.js"></script>
+	<script src="script/almond.js"></script>
+	<script src="script/game.js"></script>
+	<script>
+		window.onerror = function(e)
+		{
+			alert(e);
+		}
+		require(['main'],function(){
+			_ballybally_main();
+		})
+		$(document).on('touchmove', function(e) {
+   			 e.preventDefault();
+		});
+	</script>
+	<style>
+		canvas {
+			image-rendering: optimizeSpeed;
+			/* Legal fallback */
+			image-rendering: -moz-crisp-edges;
+			/* Firefox        */
+			image-rendering: -o-crisp-edges;
+			/* Opera          */
+			image-rendering: -webkit-optimize-contrast;
+			/* Safari         */
+			image-rendering: optimize-contrast;
+			/* CSS3 Proposed  */
+			image-rendering: crisp-edges;
+			/* CSS4 Proposed  */
+			image-rendering: pixelated;
+			/* CSS4 Proposed  */
+			-ms-interpolation-mode: nearest-neighbor;
+			/* IE8+           */
+		}
+		
+		body {
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+		}
+		
+		.contentOnly {
+			margin: 0;
+			padding: 0;
+			border: 0;
+		}
+		
+		.noselect {
+			-webkit-user-select: none;
+			/* Chrome all / Safari all */
+			-moz-user-select: none;
+			/* Firefox all */
+			-ms-user-select: none;
+			/* IE 10+ */
+			user-select: none;
+			/* Likely future */
+		}
+		
+		.MyInput {
+			border: 0;
+			border-bottom: solid 2px white;
+			background-color: rgba(0, 0, 0, 0);
+		}
+		
+		button:active > .normal {
+			transform: scale(0.8);
+		}
+		
+	</style>
+</head>
+
+<body>
+	<div class='contentOnly noselect' id='canvasWrapper'>
+		<canvas></canvas>
+		<div id="login_panel" class='contentOnly' style='position:absolute;width:100%;height:100%;background-color:rgba(0,0,0,0.5);text-align:center'>
+			<div id='login_dialog' style="display:inline-block;position:relative;width:70%;height:25%;top:30%;background-color:rgba(0,0,0,0);border-radius:10px;">
+				<img src="images/hall/dialog_bg.png" style="position:absolute;left:0;top:0;z-index:0;width:100%;height:100%" />
+				<div id="login_input_panel" style="position:absolute;">
+					<img id="login_username_image" src="images/login/-_0007_用户名：.png" style="position:absolute" />
+					<img id="login_password_image" src="images/login/-_0006_密---码：-.png" style="position:absolute" />
+
+					<input id="login_username" type="text" class="MyInput" style="position:absolute;" />
+					<input id="login_password" type="password" class="MyInput" style="position:absolute" />
+					<button id="login_register_button" class="contentOnly" style="position:absolute;background-color:rgba(0,0,0,0)">
+						<img class="normal" src="images/login/reg_button.png" style="width:100%;height:100%"/>
+					</button>
+					<button id="login_login_button" class="contentOnly" style="position:absolute;background-color:rgba(0,0,0,0)">
+						<img class="normal" src="images/login/login_button.png" style="width:100%;height:100%"/>
+					</button>
+
+				</div>
+				<div id="login_message" style="color:red;position:absolute">xxxxxxx</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+
+</html>

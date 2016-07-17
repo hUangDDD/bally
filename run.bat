@@ -1,0 +1,1 @@
+nodemon server/dist/server/main.js -w server/dist -- --ss=192.168.1.49:9003 --port=29999 --mongo=mongodb://192.168.1.4/db

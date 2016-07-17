@@ -1,0 +1,25 @@
+{
+	"body": [
+		"body.html"
+	],
+	"css": [
+		"main.css",
+		"arthref.css",
+		"addtohomescreen.css"
+	],
+	"javascript": [
+		"../script/tweenjs-0.6.2.min.js",
+		"../script/easeljs-0.8.2.min.js",
+		"../script/soundjs-0.6.2.combined.js",
+		"../script/box2d.js",
+		"../script/almond.js",
+		"../script/game.js",
+		"main.js"
+	],
+	"webworker": [
+		"../script/box2d.js",
+		"../script/almond.js",
+		"../script/game.js",
+		"webworker.js"
+	]
+}
