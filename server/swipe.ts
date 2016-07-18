@@ -1,5 +1,5 @@
 ///<reference path="typings/tsd.d.ts"/>
-import {res as res_define} from '../client/src/hall/HallRes.ts';
+import {res as res_define} from '../client/src/hall/HallRes';
 import * as fs from 'fs'
 var path=require('path').posix;
 
@@ -14,7 +14,8 @@ function walk(base, p) {
 		files[path.join(p, item)]=1;
 	});
 }
-walk(path.join(__dirname,'../../client/dist/'), 'images');
+console.log(__dirname, path.resolve('../../../client/dist/'));
+walk(path.resolve('../../../client/dist/'), 'images');
 
 for (let i=0; i<res_define.length; i++) {
 	if (files[res_define[i].src]) files[res_define[i].src]='used';
